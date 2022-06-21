@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script await src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script await src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <title>Document</title>
+</head>
+<body>
+  <canvas id="myChart" width="400" height="400"></canvas>
+  <script>
+    let labels;
+    let values;
+    let yes = $.getJSON("data/4_28_2022.json", (data) => {
+      data = JSON.parse(data[0])
+      console.log(data)
+      labels = Object.keys(data.mainObj).slice(0, 5)
+      values = Object.values(data.mainObj).slice(0, 5)
+      return data
+    })
+    console.log(yes)
+
+    const data = {
+      labels: labels,
+      datasets: [{
+        label: 'My First dataset',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)',
+        data: [0, 10, 5, 2, 20, 30, 45],
+    }]
+  };
+
+  const config = {
+    type: 'line',
+    data: values,
+    options: {}
+  };
+
+  const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+  </script>
+</body>
+</html>
