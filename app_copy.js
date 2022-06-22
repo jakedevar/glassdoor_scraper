@@ -1,4 +1,3 @@
-
 const puppeteer = require('puppeteer');
 const fs = require('fs')
 
@@ -6,6 +5,9 @@ let browser;
 let page;
 let listings;
 
+class SetUp {
+
+}
 async function setUp() {
 
 	browser = await puppeteer.launch({headless:false, devtools:false});
@@ -17,11 +19,12 @@ async function setUp() {
 	page.waitForSelector('.jaCreateAccountEmailSignUpButton').then(x => x.click()).catch(() => console.log('fuuuuuck'))
 	await page.waitForSelector('.css-w3qhip, .eb2o9h0').then(x => x.click()).catch(() => console.log('fuuuuuck'))
 
-	await page.type('.css-1kmcde, .e1h5k8h92', 'devarennesjacob@gmail.com').then(() => null).catch(() => console.log('email not logged'))
+	await page.type('.css-1kmcde, .e1h5k8h92', 'zakquerygotem@gmail.com').then(() => null).catch(() => console.log('email not logged'))
 	await page.keyboard.press('Enter', {delay: 500}).then(() => null).catch(() => console.log('enter unsuccessfull'))
 	await page.$('.css-w3qhip, .eb2o9h0').then(x => x.click()).catch(() => console.log('click unsuccessfull'))
-	await page.type('.css-1kmcde, .e1h5k8h92', '1Backdoor$').then(() => null).catch(x => console.log('type unsuccessfull'))
-	await page.keyboard.press('Enter', {delay: 500}).then(() => null).catch(() => console.log('enter unsuccessfull'))
+	await page.type('.css-1kmcde, .e1h5k8h92', '10FoldJones').then(() => null).catch(x => console.log('type unsuccessfull'))
+	await page.keyboard.press('Enter', {delay: 1000}).then(() => null).catch(() => console.log('enter unsuccessfull'))
+
 	let prom = new Promise((resolve, reject) => {
 		page.on('load', () => {
 			page.$$('.evpplnh1').then(x => x[8].click()).catch(() => console.log('its not happenin'))
@@ -83,6 +86,7 @@ function mainObj() {
 
 async function objectGet() {
 	listings = await page.$$(".react-job-listing, .css-bkasv9, .eigr9kq0").then(x => x).catch(x => console.log('nah there was an error bruh'));
+	console.log(listings)
 	let int = setInterval(async () => {
 		await listings[counter].click();
 		await objectMaker(listings)
@@ -99,7 +103,7 @@ async function objectGet() {
 				let date = new Date()
 				let string = await `glassdoor_${date.getMonth()}_${date.getDate()}_${date.getFullYear()}.json`
 			  await fs.writeFile(`data/${string}`, JSON.stringify(jobsData, null, 2), (error) => error ? console.log('file created successfully') : console.log(error));
-				break;
+				return;
 			}
 			await next();
 			setTimeout(async () => {

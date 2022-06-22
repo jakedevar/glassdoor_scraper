@@ -1,0 +1,20 @@
+{
+  "termCounts": {
+    "minSal": 1,
+    "maxSal": 1,
+    "java": 1,
+    ".net": 1,
+    "hmi": 1,
+    "ethernet": 1
+  },
+  "jobsCollection": [
+    {
+      "minSal": "$36",
+      "maxSal": "$43",
+      "java": 1,
+      ".net": 1,
+      "hmi": 1,
+      "ethernet": 1
+    }
+  ]
+}
