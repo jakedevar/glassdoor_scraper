@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 const fs = require('fs')
 // this var below was slapdash but closes the browser at the end
 let brows = null
-
+const jobsArray = []
 // this operates the whole thing in reality, this opens the page, logs in, and then begins the process for the navigation class 
 class SetUp {
 	constructor() {
@@ -10,7 +10,7 @@ class SetUp {
 	}
 
 	async initializePage() {
-		this.browser = await puppeteer.launch({headless:false, devtools:false});
+		this.browser = await puppeteer.launch({headless:true, devtools:false});
 		brows = this.browser
 		this.page = await this.browser.newPage()
 		await this.page.goto('https://www.glassdoor.com/Job/software-engineer-jobs-SRCH_KO0,17.htm?context=Jobs&clickSource=searchBox')
@@ -49,7 +49,6 @@ class SetUp {
 // I tried making somethings private but I don't really know how much good it will do 
 // CreateJobs makes the array for all the jobs as well as the main object 
 class CreateJobs {
-	#jobsArray = []
 	#job = {}
 	#terms = ['javascript', 'elm', 'typescript', 'scala', 'python', ' go ', 'ruby', 'swift', 'java', ' c ', 'rust', 'html', 'css', 'sql', 'nosql', 'postgres', 'c#',  'perl', ' r ', 'node\.js', 'git', 
 'vue', 'angular', 'django', 'ruby on rails', 'laravel', 'asp\.net', 'express', 'spring', 'ember', 'react', 'meteor', 'agile', 'kotlin', 'php',
@@ -70,13 +69,18 @@ class CreateJobs {
 		let text = await this.page.$eval('.jobDescriptionContent', (jobDesc) => {
 			return jobDesc.textContent;
 		}).then((jobDesc) => jobDesc).catch(() => console.log('jobDescriptionContent was not returned'))
-		text = text.toLowerCase()
-		this.#terms.forEach(term => {
-			if (text.match(term)) {
-				this.#job[term] = text.match(term).length
-			}
-		})
-		this.#jobsArray.push(this.#job);
+		try {
+			text = text.toLowerCase()
+			this.#terms.forEach(term => {
+				if (text.match(term)) {
+					this.#job[term] = text.match(term).length
+				}
+			})
+		} catch(e) {
+			console.log(e)
+		}
+		jobsArray.push(this.#job);
+		this.#job = {}
 	}
 
 	async #createSalary(jobText) {
@@ -93,7 +97,7 @@ class CreateJobs {
 	// this is the averages and counts for everything in the jobsArray 
 	createMainObj() {
 		let main = {};
-		this.#jobsArray.forEach(listing => {
+		jobsArray.forEach(listing => {
 			let keys = Object.keys(listing);
 			keys.forEach(key => {
 				main[key] = main[key] || 0;
@@ -104,7 +108,7 @@ class CreateJobs {
 	}
 
 	exposeJobsArray() {
-		return this.#jobsArray
+		return jobsArray
 	}
 }
 
@@ -141,10 +145,10 @@ class pageNavigation {
 			// determine if to continue to next page or finish operation
 			if (this.counter === this.#listings.length && this.jobPage < 30) {
 				this.nextPageAndStart(int)
-			} else if (this.jobPage >= 29) {
+			} else if (this.jobPage > 29) {
 				const jobsData = {};
 				jobsData.termCounts = this.CreateJobs.createMainObj()
-				jobsData.jobsCollection = this.CreateJobs.exposeJobsArray()
+				jobsData.jobsCollection = jobsArray
 				await this.writeFile(jobsData)
 				brows.close()
 				return;
@@ -166,7 +170,7 @@ class pageNavigation {
 		setTimeout(async () => {
 			await this.page.on('load')
 			await this.createInterval();
-		}, 3000)
+		}, 3500)
 	}
 }
 
