@@ -1,0 +1,407 @@
+{
+  "languages": {
+    "python": 8,
+    "java": 18,
+    "scala": 10,
+    "c#": 3,
+    "kotlin": 2,
+    "php": 1,
+    "javascript": 10,
+    "swift": 3,
+    "perl": 1,
+    " c ": 1,
+    "rust": 2,
+    "objective-c": 2,
+    "typescript": 2
+  },
+  "frameworks": {
+    "ember": 17,
+    "spring": 4,
+    ".net": 12,
+    "express": 2,
+    "react": 3,
+    "elm": 1
+  },
+  "backend": {
+    "docker": 3,
+    "hadoop": 1
+  },
+  "frontend": {
+    "elasticsearch": 1,
+    "html": 6,
+    "css": 5,
+    "bootstrap": 1
+  },
+  "sqlNoSql": {
+    "sql": 12,
+    "nosql": 7,
+    "graphql": 1,
+    "postgres": 2,
+    "mysql": 2,
+    "cassandra": 2
+  },
+  "security": {
+    "authorization": 3,
+    "cybersecurity": 2
+  },
+  "testing": {
+    "selenium": 1
+  },
+  "cloudTerms": {
+    " aws ": 2,
+    "s3": 1
+  },
+  "softwareDevProcesses": {
+    "agile": 9,
+    " qa ": 5,
+    "devops": 3,
+    "scrum": 2
+  },
+  "versionControl": {
+    "git": 5
+  },
+  "operatingSys": {
+    "windows": 1,
+    "linux": 2,
+    "iis": 1
+  },
+  "other": {
+    "arm": 1,
+    "usb": 1,
+    "machine learning": 2
+  },
+  "termCounts": {
+    "ember": 17,
+    "sql": 12,
+    "selenium": 1,
+    "agile": 9,
+    " qa ": 5,
+    "python": 8,
+    "java": 18,
+    "spring": 4,
+    ".net": 12,
+    "nosql": 7,
+    " aws ": 2,
+    "git": 5,
+    "authorization": 3,
+    "docker": 3,
+    "scala": 10,
+    "c#": 3,
+    "devops": 3,
+    "arm": 1,
+    "kotlin": 2,
+    "graphql": 1,
+    "windows": 1,
+    "linux": 2,
+    "usb": 1,
+    "php": 1,
+    "express": 2,
+    "cybersecurity": 2,
+    "javascript": 10,
+    "react": 3,
+    "postgres": 2,
+    "swift": 3,
+    "elm": 1,
+    "mysql": 2,
+    "elasticsearch": 1,
+    "perl": 1,
+    "html": 6,
+    "css": 5,
+    "cassandra": 2,
+    "hadoop": 1,
+    "machine learning": 2,
+    " c ": 1,
+    "rust": 2,
+    "objective-c": 2,
+    "scrum": 2,
+    "s3": 1,
+    "typescript": 2,
+    "bootstrap": 1,
+    "iis": 1
+  },
+  "jobsCollection": [
+    {
+      "ember": 1,
+      "sql": 1,
+      "selenium": 1,
+      "agile": 1,
+      " qa ": 1
+    },
+    {
+      "minSal": 75,
+      "maxSal": 115,
+      "python": 1,
+      "java": 1,
+      "ember": 1,
+      "spring": 1,
+      ".net": 1,
+      "sql": 1,
+      "nosql": 1,
+      " aws ": 1,
+      "git": 1,
+      "authorization": 1,
+      "docker": 1,
+      "agile": 1
+    },
+    {
+      "minSal": 141,
+      "maxSal": 189,
+      "scala": 1,
+      "ember": 1
+    },
+    {
+      "minSal": 144,
+      "maxSal": 194,
+      "java": 1,
+      "c#": 1,
+      "scala": 1,
+      "devops": 1,
+      "arm": 1
+    },
+    {
+      "minSal": 105,
+      "maxSal": 160,
+      "java": 1,
+      "kotlin": 1,
+      "ember": 1,
+      ".net": 1,
+      "sql": 1,
+      "nosql": 1,
+      "graphql": 1,
+      "docker": 1
+    },
+    {
+      "minSal": 126,
+      "maxSal": 177,
+      "scala": 1,
+      "ember": 1
+    },
+    {
+      "minSal": 60,
+      "maxSal": 88,
+      ".net": 1,
+      "windows": 1,
+      "linux": 1,
+      "usb": 1
+    },
+    {
+      "python": 1,
+      "java": 1,
+      "php": 1,
+      "scala": 1,
+      "express": 1,
+      " qa ": 1
+    },
+    {
+      "minSal": 83,
+      "maxSal": 120,
+      "git": 1,
+      "cybersecurity": 1,
+      "agile": 1
+    },
+    {
+      "minSal": 65,
+      "maxSal": 94,
+      "linux": 1,
+      "cybersecurity": 1
+    },
+    {
+      "python": 1,
+      "scala": 1,
+      "ember": 1,
+      ".net": 1,
+      " qa ": 1
+    },
+    {
+      "minSal": 110,
+      "maxSal": 115,
+      " qa ": 1
+    },
+    {
+      "minSal": 146,
+      "maxSal": 218,
+      "javascript": 1,
+      "java": 1,
+      "ember": 1,
+      "react": 1,
+      "postgres": 1,
+      " aws ": 1
+    },
+    {
+      "minSal": 98,
+      "maxSal": 148,
+      "javascript": 1,
+      "java": 1,
+      "ember": 1,
+      "react": 1,
+      "postgres": 1
+    },
+    {
+      "minSal": 150,
+      "maxSal": 200,
+      "python": 1,
+      "swift": 1,
+      "java": 1,
+      "kotlin": 1,
+      "scala": 1,
+      "elm": 1,
+      "ember": 1,
+      "spring": 1,
+      ".net": 1,
+      "sql": 1,
+      "mysql": 1,
+      "git": 1,
+      "elasticsearch": 1,
+      "docker": 1
+    },
+    {
+      "minSal": 90,
+      "maxSal": 130,
+      "javascript": 1,
+      "python": 1,
+      "java": 1,
+      "c#": 1,
+      "perl": 1,
+      "scala": 1,
+      "express": 1,
+      "ember": 1,
+      ".net": 1,
+      "sql": 1,
+      "mysql": 1,
+      "html": 1,
+      "css": 1
+    },
+    {
+      "java": 1,
+      ".net": 1,
+      "sql": 1,
+      "nosql": 1,
+      "cassandra": 1
+    },
+    {
+      "python": 1,
+      "java": 1,
+      "scala": 1,
+      "spring": 1,
+      "sql": 1,
+      "nosql": 1,
+      "cassandra": 1,
+      "hadoop": 1,
+      "machine learning": 1
+    },
+    {
+      " c ": 1
+    },
+    {
+      "minSal": 126,
+      "maxSal": 201,
+      "python": 1,
+      "java": 1,
+      "sql": 1,
+      "git": 1
+    },
+    {
+      "javascript": 1,
+      "python": 1,
+      "swift": 1,
+      "java": 1,
+      "rust": 1,
+      "objective-c": 1,
+      "ember": 1,
+      "react": 1,
+      "spring": 1,
+      ".net": 1,
+      "html": 1,
+      "devops": 1
+    },
+    {
+      "javascript": 1,
+      "java": 1,
+      "scala": 1,
+      "git": 1,
+      "agile": 1,
+      "scrum": 1
+    },
+    {
+      "javascript": 1,
+      "swift": 1,
+      "java": 1,
+      "objective-c": 1,
+      ".net": 1,
+      "s3": 1,
+      "html": 1,
+      "css": 1,
+      "devops": 1,
+      "machine learning": 1
+    },
+    {
+      "rust": 1,
+      "ember": 1,
+      ".net": 1,
+      "authorization": 1,
+      "agile": 1
+    },
+    {
+      "minSal": 50,
+      "maxSal": 130,
+      "javascript": 1,
+      "typescript": 1,
+      "java": 1,
+      "ember": 1,
+      "sql": 1,
+      "nosql": 1,
+      "html": 1,
+      "css": 1,
+      "agile": 1
+    },
+    {
+      "minSal": 79,
+      "maxSal": 122,
+      "javascript": 1,
+      "java": 1,
+      "ember": 1,
+      "sql": 1,
+      "nosql": 1
+    },
+    {
+      "minSal": 75,
+      "maxSal": 164,
+      "javascript": 1,
+      "java": 1,
+      "ember": 1,
+      ".net": 1,
+      "html": 1,
+      "css": 1,
+      "bootstrap": 1,
+      "agile": 1
+    },
+    {
+      "minSal": 70,
+      "maxSal": 110,
+      "c#": 1,
+      "ember": 1,
+      ".net": 1,
+      "sql": 1,
+      "agile": 1,
+      "scrum": 1,
+      " qa ": 1
+    },
+    {
+      "minSal": 90,
+      "maxSal": 170,
+      "javascript": 1,
+      "typescript": 1,
+      "java": 1,
+      "scala": 1,
+      "ember": 1,
+      "sql": 1,
+      "nosql": 1,
+      "iis": 1,
+      "authorization": 1,
+      "html": 1,
+      "css": 1,
+      "agile": 1
+    }
+  ],
+  "id": "2022-07-26T02:57:03.555Z"
+}
